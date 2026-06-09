@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Habouba Ahmed Amine — Élève Ingénieur Informatique</title>
+  <meta name="description" content="Élève ingénieur en informatique, polyvalent et orienté solutions. Expertise en développement Full-Stack (Web, Mobile, Desktop) et infrastructures réseaux." />
+  <meta name="keywords" content="ingénieur informatique, développeur full-stack, web, mobile, desktop, React, Flutter, Symfony, Python, stage, Tunisie, Esprit" />
+  <meta name="author" content="Habouba Ahmed Amine" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Habouba Ahmed Amine — Élève Ingénieur Informatique" />
+  <meta property="og:description" content="Développeur Full-Stack passionné par l'innovation technique — Web, Mobile, Desktop." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ahmed-habouba.github.io/portfolio" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen" class="loading-screen" aria-hidden="true">
+    <div class="loading-inner">
+      <div class="loading-hex">
+        <span class="loading-initials">AH</span>
+      </div>
+      <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+      <span class="loading-text" data-en="Initializing..." data-fr="Chargement...">Chargement...</span>
+    </div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="navbar" role="banner">
+    <nav class="nav-container" aria-label="Navigation principale">
+      <a href="#hero" class="nav-logo" aria-label="Ahmed Habouba — Accueil">
+        <span class="logo-hex">AH</span>
+        <span class="logo-text">Ahmed<span class="accent">.</span>dev</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about"          class="nav-link" data-en="About"          data-fr="À propos">À propos</a></li>
+        <li><a href="#skills"         class="nav-link" data-en="Skills"         data-fr="Compétences">Compétences</a></li>
+        <li><a href="#experience"     class="nav-link" data-en="Experience"     data-fr="Expérience">Expérience</a></li>
+        <li><a href="#education"      class="nav-link" data-en="Education"      data-fr="Formation">Formation</a></li>
+        <li><a href="#projects"       class="nav-link" data-en="Projects"       data-fr="Projets">Projets</a></li>
+        <li><a href="#certifications" class="nav-link" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+        <li><a href="#contact"        class="nav-link" data-en="Contact"        data-fr="Contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button id="lang-toggle" class="ctrl-btn lang-btn" aria-label="Changer la langue">
+          <span class="lang-active">FR</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-inactive">EN</span>
+        </button>
+        <button id="theme-toggle" class="ctrl-btn theme-btn" aria-label="Basculer mode sombre/clair">
+          <span class="theme-icon theme-icon--dark">☽</span>
+          <span class="theme-icon theme-icon--light">○</span>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Navigation mobile" hidden>
+      <ul class="mobile-nav-links" role="list">
+        <li><a href="#about"          class="mobile-nav-link" data-en="About"          data-fr="À propos">À propos</a></li>
+        <li><a href="#skills"         class="mobile-nav-link" data-en="Skills"         data-fr="Compétences">Compétences</a></li>
+        <li><a href="#experience"     class="mobile-nav-link" data-en="Experience"     data-fr="Expérience">Expérience</a></li>
+        <li><a href="#education"      class="mobile-nav-link" data-en="Education"      data-fr="Formation">Formation</a></li>
+        <li><a href="#projects"       class="mobile-nav-link" data-en="Projects"       data-fr="Projets">Projets</a></li>
+        <li><a href="#certifications" class="mobile-nav-link" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+        <li><a href="#contact"        class="mobile-nav-link" data-en="Contact"        data-fr="Contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────────── -->
+    <section id="hero" class="hero section-full" aria-label="Introduction">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-content container">
+        <!-- Avatar -->
+        <div class="hero-avatar-wrap reveal-left">
+          <div class="hero-avatar-ring"></div>
+          <div class="hero-avatar" aria-hidden="true">
+            <!-- REMPLACER par: <img src="assets/images/profile.jpg" alt="Habouba Ahmed Amine"> -->
+            <div class="avatar-placeholder">AH</div>
+          </div>
+          <div class="hero-avatar-dot"></div>
+        </div>
+
+        <!-- Text -->
+        <div class="hero-text reveal-right">
+          <p class="hero-greeting">
+            <span class="mono accent" data-en="Hello, world." data-fr="Bonjour, monde.">Bonjour, monde.</span>
+          </p>
+          <h1 class="hero-name">Ahmed Amine <span class="accent-text">Habouba</span></h1>
+          <div class="hero-typing-wrap" aria-live="polite">
+            <span class="mono hero-typed" id="typed-text"></span>
+            <span class="typing-cursor" aria-hidden="true">|</span>
+          </div>
+          <p class="hero-intro"
+            data-en="Software engineering student, versatile and solution-oriented. Practical expertise in Full-Stack development (Web, Mobile, Desktop) and network infrastructure. Passionate about technical innovation and solving complex problems."
+            data-fr="Élève ingénieur en informatique, polyvalent et orienté solutions. Expertise pratique en développement Full-Stack (Web, Mobile, Desktop) et infrastructures réseaux. Passionné par l'innovation technique et la résolution de problèmes complexes en équipe.">
+            Élève ingénieur en informatique, polyvalent et orienté solutions. Expertise pratique en développement Full-Stack (Web, Mobile, Desktop) et infrastructures réseaux. Passionné par l'innovation technique et la résolution de problèmes complexes en équipe.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">
+              <span data-en="View Projects" data-fr="Voir les projets">Voir les projets</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="cv/cv-ahmed-habouba.pdf" class="btn btn-outline" download aria-label="Télécharger le CV PDF">
+              <span data-en="Download CV" data-fr="Télécharger CV">Télécharger CV</span>
+              <span class="btn-icon" aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/ahmed-habouba" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/habbouba-ahmed-3a6840408/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <div class="scroll-hint-line"></div>
+        <span class="mono scroll-hint-text" data-en="scroll" data-fr="défiler">défiler</span>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ──────────────────────────────────────────── -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label mono" data-en="01 / About" data-fr="01 / À propos">01 / À propos</span>
+          <h2 id="about-heading" class="section-title" data-en="Who I Am" data-fr="Qui je suis">Qui je suis</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal-up">
+            <p data-en="I'm a software engineering student at Esprit Ingénieur, versatile and solution-oriented. My practical expertise spans Full-Stack development across Web, Mobile and Desktop platforms, as well as network infrastructure design and deployment."
+               data-fr="Élève ingénieur en informatique à Esprit Ingénieur, polyvalent et orienté solutions. Mon expertise couvre le développement Full-Stack sur les plateformes Web, Mobile et Desktop, ainsi que la conception et le déploiement d'infrastructures réseaux.">
+              Élève ingénieur en informatique à Esprit Ingénieur, polyvalent et orienté solutions. Mon expertise couvre le développement Full-Stack sur les plateformes Web, Mobile et Desktop, ainsi que la conception et le déploiement d'infrastructures réseaux.
+            </p>
+            <p data-en="I thrive on complex technical challenges — whether designing a secure network architecture, building a full agricultural management platform, or developing a smart mobile nutrition app. I believe great software is both technically solid and elegantly designed."
+               data-fr="Je m'épanouis face aux défis techniques complexes — qu'il s'agisse de concevoir une architecture réseau sécurisée, de construire une plateforme complète de gestion agricole, ou de développer une application mobile intelligente de nutrition. Je crois que le grand logiciel est à la fois techniquement solide et élégamment conçu.">
+              Je m'épanouis face aux défis techniques complexes — qu'il s'agisse de concevoir une architecture réseau sécurisée, de construire une plateforme complète de gestion agricole, ou de développer une application mobile intelligente de nutrition. Je crois que le grand logiciel est à la fois techniquement solide et élégamment conçu.
+            </p>
+            <p data-en="Outside of coding, I enjoy sports, philosophy, and chess — disciplines that sharpen my strategic thinking and problem-solving mindset."
+               data-fr="En dehors du code, j'apprécie le sport, la philosophie et les échecs — des disciplines qui affûtent ma pensée stratégique et mon esprit analytique.">
+              En dehors du code, j'apprécie le sport, la philosophie et les échecs — des disciplines qui affûtent ma pensée stratégique et mon esprit analytique.
+            </p>
+
+            <div class="about-facts">
+              <div class="fact-item">
+                <span class="fact-number accent">5+</span>
+                <span class="fact-label" data-en="Projects Built" data-fr="Projets réalisés">Projets réalisés</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-number accent">3</span>
+                <span class="fact-label" data-en="Platforms" data-fr="Plateformes">Plateformes</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-number accent">B2</span>
+                <span class="fact-label" data-en="French & English" data-fr="Français & Anglais">Français &amp; Anglais</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual reveal-up" style="--delay:0.2s">
+            <div class="code-card glass-card">
+              <div class="code-card-header">
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
+                <span class="code-card-title mono">about.json</span>
+              </div>
+              <pre class="code-block mono"><code><span class="code-brace">{</span>
+  <span class="code-key">"name"</span>: <span class="code-str">"Habouba Ahmed Amine"</span>,
+  <span class="code-key">"role"</span>: <span class="code-str">"Élève Ingénieur Informatique"</span>,
+  <span class="code-key">"school"</span>: <span class="code-str">"Esprit Ingénieur"</span>,
+  <span class="code-key">"location"</span>: <span class="code-str">"Tozeur / Tunis, Tunisie"</span>,
+  <span class="code-key">"available"</span>: <span class="code-bool">true</span>,
+  <span class="code-key">"seeking"</span>: <span class="code-str">"Stage / Internship"</span>,
+  <span class="code-key">"platforms"</span>: [
+    <span class="code-str">"Web 🌐"</span>,
+    <span class="code-str">"Mobile 📱"</span>,
+    <span class="code-str">"Desktop 🖥️"</span>
+  ],
+  <span class="code-key">"languages"</span>: [
+    <span class="code-str">"Arabe 🇹🇳 (Natif)"</span>,
+    <span class="code-str">"Français 🇫🇷 (B2)"</span>,
+    <span class="code-str">"Anglais 🇬🇧 (B2)"</span>
+  ],
+  <span class="code-key">"hobbies"</span>: [
+    <span class="code-str">"Sport ⚽"</span>,
+    <span class="code-str">"Philosophie 📚"</span>,
+    <span class="code-str">"Échecs ♟️"</span>
+  ]
+<span class="code-brace">}</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ──────────────────────────────────────────── -->
+    <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label mono" data-en="02 / Skills" data-fr="02 / Compétences">02 / Compétences</span>
+          <h2 id="skills-heading" class="section-title" data-en="Technical Arsenal" data-fr="Arsenal technique">Arsenal technique</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Frontend -->
+          <div class="skill-category glass-card reveal-up">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon" aria-hidden="true">◈</span>
+              <h3 class="skill-cat-title" data-en="Frontend" data-fr="Frontend">Frontend</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="85">React</span>
+              <span class="skill-tag" data-level="80">JavaScript</span>
+              <span class="skill-tag" data-level="88">HTML5 / CSS3</span>
+              <span class="skill-tag" data-level="75">Bootstrap</span>
+              <span class="skill-tag" data-level="70">Flutter</span>
+              <span class="skill-tag" data-level="65">Figma / UX Design</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category glass-card reveal-up" style="--delay:0.1s">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon" aria-hidden="true">◇</span>
+              <h3 class="skill-cat-title" data-en="Backend" data-fr="Backend">Backend</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="82">Python</span>
+              <span class="skill-tag" data-level="80">PHP / Symfony</span>
+              <span class="skill-tag" data-level="78">Java</span>
+              <span class="skill-tag" data-level="75">C / C++</span>
+              <span class="skill-tag" data-level="70">SDL</span>
+              <span class="skill-tag" data-level="72">Qt (Desktop)</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-category glass-card reveal-up" style="--delay:0.2s">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon" aria-hidden="true">○</span>
+              <h3 class="skill-cat-title" data-en="Databases" data-fr="Bases de données">Bases de données</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="85">MySQL</span>
+              <span class="skill-tag" data-level="75">Oracle</span>
+              <span class="skill-tag" data-level="70">SQL</span>
+            </div>
+          </div>
+
+          <!-- Tools & Réseau -->
+          <div class="skill-category glass-card reveal-up" style="--delay:0.3s">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon" aria-hidden="true">◉</span>
+              <h3 class="skill-cat-title" data-en="Tools &amp; Network" data-fr="Outils &amp; Réseau">Outils &amp; Réseau</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-level="90">Git / GitHub</span>
+              <span class="skill-tag" data-level="75">VS Code</span>
+              <span class="skill-tag" data-level="70">Arduino</span>
+              <span class="skill-tag" data-level="72">Linux / Bash</span>
+              <span class="skill-tag" data-level="68">VLSM / VPN</span>
+              <span class="skill-tag" data-level="65">NAT / Virtualisation</span>
+              <span class="skill-tag" data-level="75">Agile / Scrum</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ──────────────────────────────────────── -->
+    <section id="experience" class="section" aria-labelledby="exp-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label mono" data-en="03 / Experience" data-fr="03 / Expérience">03 / Expérience</span>
+          <h2 id="exp-heading" class="section-title" data-en="Experience" data-fr="Expérience">Expérience</h2>
+        </div>
+
+        <div class="timeline" role="list">
+
+          <!-- Projet ML & UX -->
+          <article class="timeline-item reveal-up" role="listitem">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role" data-en="Machine Learning & UX Project" data-fr="Projet Machine Learning & UX">Projet Machine Learning &amp; UX</h3>
+                  <span class="timeline-company accent">Esprit Ingénieur</span>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date mono">2026</span>
+                  <span class="timeline-type" data-en="Academic Project" data-fr="Projet académique">Projet académique</span>
+                </div>
+              </div>
+              <ul class="timeline-points">
+                <li data-en="Data preparation: cleaning, imputation and variable encoding for ML pipeline."
+                    data-fr="Data Prep : Nettoyage, imputation et encodage de variables pour pipeline ML.">
+                  Data Prep : Nettoyage, imputation et encodage de variables pour pipeline ML.
+                </li>
+                <li data-en="Implemented Multiple Regression and Decision Tree models for predictive analysis."
+                    data-fr="Implémentation de modèles de Régression Multiple et Arbres de Décision pour l'analyse prédictive.">
+                  Implémentation de modèles de Régression Multiple et Arbres de Décision pour l'analyse prédictive.
+                </li>
+                <li data-en="UX/UI: Performance evaluation and design of an interactive dashboard in Figma."
+                    data-fr="UX/UI : Évaluation de performance et conception d'un dashboard interactif sous Figma.">
+                  UX/UI : Évaluation de performance et conception d'un dashboard interactif sous Figma.
+                </li>
+              </ul>
+              <div class="timeline-techs">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Machine Learning</span>
+                <span class="tech-badge">Figma</span>
+                <span class="tech-badge">Data Science</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- AgriSense360 -->
+          <article class="timeline-item reveal-up" style="--delay:0.1s" role="listitem">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role" data-en="AgriSense360 — Agricultural Management Platform" data-fr="AgriSense360 — Plateforme de Gestion Agricole">AgriSense360 — Plateforme de Gestion Agricole</h3>
+                  <span class="timeline-company accent">Esprit Ingénieur</span>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date mono">2026</span>
+                  <span class="timeline-type" data-en="Web &amp; Desktop" data-fr="Web &amp; Desktop">Web &amp; Desktop</span>
+                </div>
+              </div>
+              <ul class="timeline-points">
+                <li data-en="Full farm management system covering crops, parcels, equipment, stocks and animals."
+                    data-fr="Système de gestion complète de ferme couvrant les cultures, parcelles, équipements, stocks et animaux ainsi que l'évaluation et l'affectation des ressources.">
+                  Système de gestion complète de ferme couvrant les cultures, parcelles, équipements, stocks et animaux ainsi que l'évaluation et l'affectation des ressources.
+                </li>
+                <li data-en="Developed dual-platform solution: Web (Symfony) and Desktop application (Java)."
+                    data-fr="Développement bi-plateforme : Application Web (Symfony) et application Desktop (Java).">
+                  Développement bi-plateforme : Application Web (Symfony) et application Desktop (Java).
+                </li>
+              </ul>
+              <div class="timeline-techs">
+                <span class="tech-badge">Symfony</span>
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">PHP</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- App Mobile Nutrition -->
+          <article class="timeline-item reveal-up" style="--delay:0.2s" role="listitem">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role" data-en="Mobile Nutrition &amp; Wellness App" data-fr="Application Mobile Nutrition &amp; Bien-être">Application Mobile Nutrition &amp; Bien-être</h3>
+                  <span class="timeline-company accent">Esprit Ingénieur</span>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date mono">2026</span>
+                  <span class="timeline-type" data-en="Mobile" data-fr="Mobile">Mobile</span>
+                </div>
+              </div>
+              <ul class="timeline-points">
+                <li data-en="Developed a mobile app for macronutrient tracking and personalized dietary management."
+                    data-fr="Développement d'une application mobile de suivi des macronutriments et de gestion alimentaire personnalisée.">
+                  Développement d'une application mobile de suivi des macronutriments et de gestion alimentaire personnalisée.
+                </li>
+                <li data-en="UI/UX Design and integration of nutrition &amp; recipe APIs for real-time intelligent meal suggestions."
+                    data-fr="UI/UX Design et intégration d'APIs de nutrition et de recettes pour la suggestion intelligente de repas en temps réel.">
+                  UI/UX Design et intégration d'APIs de nutrition et de recettes pour la suggestion intelligente de repas en temps réel.
+                </li>
+              </ul>
+              <div class="timeline-techs">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">Dart</span>
+                <span class="tech-badge">REST APIs</span>
+                <span class="tech-badge">UI/UX</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Infrastructure Réseau -->
+          <article class="timeline-item reveal-up" style="--delay:0.3s" role="listitem">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role" data-en="Network Infrastructure Deployment" data-fr="Déploiement d'Infrastructure Réseau">Déploiement d'Infrastructure Réseau</h3>
+                  <span class="timeline-company accent">Esprit Ingénieur</span>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date mono">2025</span>
+                  <span class="timeline-type" data-en="Network / DevOps" data-fr="Réseau / DevOps">Réseau / DevOps</span>
+                </div>
+              </div>
+              <ul class="timeline-points">
+                <li data-en="Deployed a secure multi-service network architecture from scratch."
+                    data-fr="Déploiement d'un réseau multiservice sécurisé complet.">
+                  Déploiement d'un réseau multiservice sécurisé complet.
+                </li>
+                <li data-en="Security: VLSM segmentation, Internet access via NAT and site-to-site VPN tunnels."
+                    data-fr="Sécurité &amp; Réseau : Segmentation VLSM, accès Internet via NAT et tunnels VPN site-à-site.">
+                  Sécurité &amp; Réseau : Segmentation VLSM, accès Internet via NAT et tunnels VPN site-à-site.
+                </li>
+                <li data-en="Server virtualization: Web, DB, NFS and Monitoring services."
+                    data-fr="Infrastructure : Virtualisation de serveurs (Web, DB, NFS, Monitoring).">
+                  Infrastructure : Virtualisation de serveurs (Web, DB, NFS, Monitoring).
+                </li>
+              </ul>
+              <div class="timeline-techs">
+                <span class="tech-badge">VLSM</span>
+                <span class="tech-badge">VPN</span>
+                <span class="tech-badge">NAT</span>
+                <span class="tech-badge">Virtualisation</span>
+                <span class="tech-badge">Linux</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pressing Desktop App -->
+          <article class="timeline-item reveal-up" style="--delay:0.4s" role="listitem">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role" data-en="Dry Cleaning Desktop Management App" data-fr="Application Desktop de Gestion pour Pressing">Application Desktop de Gestion pour Pressing</h3>
+                  <span class="timeline-company accent">Esprit Ingénieur</span>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-date mono">2025</span>
+                  <span class="timeline-type" data-en="Desktop" data-fr="Desktop">Desktop</span>
+                </div>
+              </div>
+              <ul class="timeline-points">
+                <li data-en="Complete desktop management software for a dry cleaning business built with C++ and Qt Designer."
+                    data-fr="Logiciel de gestion totale d'une pressing en C++ / Qt Designer.">
+                  Logiciel de gestion totale d'une pressing en C++ / Qt Designer.
+                </li>
+                <li data-en="Full implementation of modules: Clients, Equipment, Feedback and Projects."
+                    data-fr="Implémentation complète des modules : Clients, Équipements, Feedback et Projets.">
+                  Implémentation complète des modules : Clients, Équipements, Feedback et Projets.
+                </li>
+              </ul>
+              <div class="timeline-techs">
+                <span class="tech-badge">C++</span>
+                <span class="tech-badge">Qt Designer</span>
+                <span class="tech-badge">MySQL</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ──────────────────────────────────────── -->
+    <section id="education" class="section section-alt" aria-labelledby="edu-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label mono" data-en="04 / Education" data-fr="04 / Formation">04 / Formation</span>
+          <h2 id="edu-heading" class="section-title" data-en="Academic Background" data-fr="Parcours académique">Parcours académique</h2>
+        </div>
+
+        <div class="education-grid">
+
+          <article class="edu-card glass-card reveal-up">
+            <div class="edu-icon" aria-hidden="true">◈</div>
+            <div class="edu-body">
+              <h3 class="edu-degree" data-en="Engineering Degree in Computer Science" data-fr="Diplôme d'Ingénieur en Informatique">Diplôme d'Ingénieur en Informatique</h3>
+              <span class="edu-school accent">Esprit Ingénieur</span>
+              <span class="edu-date mono" data-en="2024 – Present" data-fr="2024 – Présent">2024 – Présent</span>
+              <p class="edu-desc"
+                data-en="Engineering degree in Computer Science at Esprit Ingénieur, Tunis. Specializing in Full-Stack development (Web, Mobile, Desktop), network infrastructure, machine learning and software architecture."
+                data-fr="Diplôme d'ingénieur en informatique à Esprit Ingénieur, Tunis. Spécialisation en développement Full-Stack (Web, Mobile, Desktop), infrastructures réseaux, machine learning et architecture logicielle.">
+                Diplôme d'ingénieur en informatique à Esprit Ingénieur, Tunis. Spécialisation en développement Full-Stack (Web, Mobile, Desktop), infrastructures réseaux, machine learning et architecture logicielle.
+              </p>
+            </div>
+          </article>
+
+          <article class="edu-card glass-card reveal-up" style="--delay:0.1s">
+            <div class="edu-icon" aria-hidden="true">○</div>
+            <div class="edu-body">
+              <h3 class="edu-degree" data-en="Baccalauréat — Technical Sciences" data-fr="Baccalauréat Techniques">Baccalauréat Techniques</h3>
+              <span class="edu-school accent">Lycée Nefta</span>
+              <span class="edu-date mono" data-en="June 2024" data-fr="Juin 2024">Juin 2024</span>
+              <p class="edu-desc"
+                data-en="Baccalaureate in Technical Sciences at Lycée Nefta, Tozeur."
+                data-fr="Baccalauréat Techniques au Lycée Nefta, Tozeur.">
+                Baccalauréat Techniques au Lycée Nefta, Tozeur.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ────────────────────────────────────────── -->
+    <section id="projects" class="section" aria-labelledby="proj-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label mono" data-en="05 / Projects" data-fr="05 / Projets">05 / Projets</span>
+          <h2 id="proj-heading" class="section-title" data-en="Featured Work" data-fr="Travaux sélectionnés">Travaux sélectionnés</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- AgriSense360 -->
+          <article class="project-card glass-card reveal-up">
+            <div class="project-image">
+              <img src="assets/images/project-agrisense.jpg" alt="AgriSense360">
+              <div class="project-overlay">
+                <a href="https://github.com/ahmed-habouba/AgriSense360-Symfony" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-number mono accent">01</span>
+              <h3 class="project-title">AgriSense360</h3>
+              <p class="project-desc"
+                data-en="Complete farm management platform covering crops, parcels, equipment, livestock and resource allocation. Dual-platform: Web + Desktop."
+                data-fr="Plateforme de gestion complète de ferme couvrant les cultures, parcelles, équipements, stocks, animaux et l'affectation des ressources. Bi-plateforme : Web + Desktop.">
+                Plateforme de gestion complète de ferme couvrant les cultures, parcelles, équipements, stocks, animaux et l'affectation des ressources. Bi-plateforme : Web + Desktop.
+              </p>
+              <div class="project-techs">
+                <span class="tech-badge">Symfony</span>
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">MySQL</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Nutrition App -->
+          <article class="project-card glass-card reveal-up" style="--delay:0.1s">
+            <div class="project-image">
+              <img src="assets/images/project-mobile.jpg" alt="Nutrition & Wellness App">
+              <div class="project-overlay">
+                <a href="https://github.com/ahmed-habouba" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-number mono accent">02</span>
+              <h3 class="project-title" data-en="Nutrition &amp; Wellness App" data-fr="App Mobile Nutrition">App Mobile Nutrition</h3>
+              <p class="project-desc"
+                data-en="Mobile app for macronutrient tracking and personalized dietary management with real-time AI meal suggestions via nutrition &amp; recipe APIs."
+                data-fr="Application mobile de suivi des macronutriments et gestion alimentaire personnalisée avec suggestions intelligentes de repas en temps réel via APIs de nutrition et recettes.">
+                Application mobile de suivi des macronutriments et gestion alimentaire personnalisée avec suggestions intelligentes de repas en temps réel via APIs de nutrition et recettes.
+              </p>
+              <div class="project-techs">
+                <span class="tech-badge">Flutter</span>
+                <span class="tech-badge">Dart</span>
+                <span class="tech-badge">REST APIs</span>
+                <span class="tech-badge">UI/UX</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ML Dashboard -->
+          <article class="project-card glass-card reveal-up" style="--delay:0.2s">
+            <div class="project-image">
+              <div class="project-img-placeholder" data-letter="M"></div>
+              <div class="project-overlay">
+                <a href="https://github.com/ahmed-habouba" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-number mono accent">03</span>
+              <h3 class="project-title" data-en="ML Dashboard &amp; Analytics" data-fr="Dashboard ML &amp; Analytics">Dashboard ML &amp; Analytics</h3>
+              <p class="project-desc"
+                data-en="Data preparation pipeline with ML models (Multiple Regression, Decision Trees) and interactive Figma dashboard for performance visualization."
+                data-fr="Pipeline de préparation de données avec modèles ML (Régression Multiple, Arbres de Décision) et dashboard interactif Figma pour la visualisation des performances.">
+                Pipeline de préparation de données avec modèles ML (Régression Multiple, Arbres de Décision) et dashboard interactif Figma pour la visualisation des performances.
+              </p>
+              <div class="project-techs">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Scikit-learn</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">Figma</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pressing App -->
+          <article class="project-card glass-card reveal-up" style="--delay:0.3s">
+            <div class="project-image">
+              <div class="project-img-placeholder" data-letter="P"></div>
+              <div class="project-overlay">
+                <a href="https://github.com/ahmed-habouba" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-number mono accent">04</span>
+              <h3 class="project-title" data-en="Pressing Management App" data-fr="Gestion Pressing — Desktop">Gestion Pressing — Desktop</h3>
+              <p class="project-desc"
+                data-en="Complete desktop management software for a dry cleaning business with full modules: Clients, Equipment, Feedback and Projects."
+                data-fr="Logiciel de gestion totale d'une pressing avec modules complets : Clients, Équipements, Feedback et Projets. Développé en C++ avec Qt Designer.">
+                Logiciel de gestion totale d'une pressing avec modules complets : Clients, Équipements, Feedback et Projets. Développé en C++ avec Qt Designer.
+              </p>
+              <div class="project-techs">
+                <span class="tech-badge">C++</span>
+                <span class="tech-badge">Qt Designer</span>
+                <span class="tech-badge">MySQL</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Network Infrastructure -->
+          <article class="project-card glass-card reveal-up" style="--delay:0.4s">
+            <div class="project-image">
+              <div class="project-img-placeholder" data-letter="R"></div>
+              <div class="project-overlay">
+                <a href="https://github.com/ahmed-habouba" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-number mono accent">05</span>
+              <h3 class="project-title" data-en="Secure Network Infrastructure" data-fr="Infrastructure Réseau Sécurisée">Infrastructure Réseau Sécurisée</h3>
+              <p class="project-desc"
+                data-en="Deployment of a complete secure multi-service network: VLSM segmentation, NAT internet access, site-to-site VPN tunnels, and virtualized servers (Web, DB, NFS, Monitoring)."
+                data-fr="Déploiement d'un réseau multiservice sécurisé complet : segmentation VLSM, accès Internet via NAT, tunnels VPN site-à-site et virtualisation de serveurs (Web, DB, NFS, Monitoring).">
+                Déploiement d'un réseau multiservice sécurisé complet : segmentation VLSM, accès Internet via NAT, tunnels VPN site-à-site et virtualisation de serveurs (Web, DB, NFS, Monitoring).
+              </p>
+              <div class="project-techs">
+                <span class="tech-badge">VLSM</span>
+                <span class="tech-badge">VPN</span>
+                <span class="tech-badge">NAT</span>
+                <span class="tech-badge">Linux</span>
+                <span class="tech-badge">Virtualisation</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CERTIFICATIONS ──────────────────────────────────── -->
+    <section id="certifications" class="section section-alt" aria-labelledby="cert-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label mono" data-en="06 / Certifications" data-fr="06 / Certifications">06 / Certifications</span>
+          <h2 id="cert-heading" class="section-title" data-en="Credentials" data-fr="Accréditations">Accréditations</h2>
+          <p class="section-subtitle"
+            data-en="No certification yet."
+            data-fr="aucune certification pour le moment.">
+            aucune certification pour le moment.
+          </p>
+        </div>
+
+        <div class="certs-grid">
+
+         <!--- <article class="cert-card glass-card reveal-up">
+            <div class="cert-logo" aria-hidden="true"><span class="cert-icon">◈</span></div>
+            <div class="cert-body">
+              <h3 class="cert-title" data-en="Your Certification 1" data-fr="Votre Certification 1">Votre Certification 1</h3>
+              <span class="cert-issuer accent" data-en="Issuer" data-fr="Organisme">Organisme</span>
+              <span class="cert-date mono">2024</span>
+              <a href="#" class="cert-link" data-en="View Credential →" data-fr="Voir le badge →">Voir le badge →</a>
+            </div>
+          </article>
+
+          <article class="cert-card glass-card reveal-up" style="--delay:0.1s">
+            <div class="cert-logo" aria-hidden="true"><span class="cert-icon">◇</span></div>
+            <div class="cert-body">
+              <h3 class="cert-title" data-en="Your Certification 2" data-fr="Votre Certification 2">Votre Certification 2</h3>
+              <span class="cert-issuer accent" data-en="Issuer" data-fr="Organisme">Organisme</span>
+              <span class="cert-date mono">2024</span>
+              <a href="#" class="cert-link" data-en="View Credential →" data-fr="Voir le badge →">Voir le badge →</a>
+            </div>
+          </article>
+
+          <article class="cert-card glass-card reveal-up" style="--delay:0.2s">
+            <div class="cert-logo" aria-hidden="true"><span class="cert-icon">○</span></div>
+            <div class="cert-body">
+              <h3 class="cert-title" data-en="Your Certification 3" data-fr="Votre Certification 3">Votre Certification 3</h3>
+              <span class="cert-issuer accent" data-en="Issuer" data-fr="Organisme">Organisme</span>
+              <span class="cert-date mono">2025</span>
+              <a href="#" class="cert-link" data-en="View Credential →" data-fr="Voir le badge →">Voir le badge →</a>
+            </div>
+          </article> -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ─────────────────────────────────────────── -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label mono" data-en="07 / Contact" data-fr="07 / Contact">07 / Contact</span>
+          <h2 id="contact-heading" class="section-title" data-en="Let's Connect" data-fr="Travaillons ensemble">Travaillons ensemble</h2>
+          <p class="section-subtitle"
+            data-en="Have an internship opportunity or a project idea? I'd love to hear from you."
+            data-fr="Vous avez une opportunité de stage ou une idée de projet ? J'adorerais avoir de vos nouvelles.">
+            Vous avez une opportunité de stage ou une idée de projet ? J'adorerais avoir de vos nouvelles.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-form-wrap glass-card reveal-left">
+            <h3 class="contact-form-title mono" data-en="// Send a message" data-fr="// Envoyer un message">// Envoyer un message</h3>
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" data-en="Name" data-fr="Nom">Nom</label>
+                <input type="text" id="contact-name" name="name" autocomplete="name" required
+                  data-placeholder-en="Your full name" data-placeholder-fr="Votre nom complet"
+                  placeholder="Votre nom complet" />
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-email" data-en="Email" data-fr="Email">Email</label>
+                <input type="email" id="contact-email" name="email" autocomplete="email" required
+                  data-placeholder-en="your@email.com" data-placeholder-fr="votre@email.com"
+                  placeholder="votre@email.com" />
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-subject" data-en="Subject" data-fr="Sujet">Sujet</label>
+                <input type="text" id="contact-subject" name="subject" required
+                  data-placeholder-en="Internship opportunity / Project idea" data-placeholder-fr="Opportunité de stage / Idée de projet"
+                  placeholder="Opportunité de stage / Idée de projet" />
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-message" data-en="Message" data-fr="Message">Message</label>
+                <textarea id="contact-message" name="message" rows="5" required
+                  data-placeholder-en="Tell me about your project or opportunity..." data-placeholder-fr="Parlez-moi de votre projet ou opportunité..."
+                  placeholder="Parlez-moi de votre projet ou opportunité..."></textarea>
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+                <span class="btn-label" data-en="Send Message" data-fr="Envoyer">Envoyer</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
+              <p class="form-status" id="form-status" aria-live="polite" role="status"></p>
+            </form>
+          </div>
+
+          <div class="contact-info reveal-right">
+            <div class="contact-card glass-card">
+              <h3 class="mono accent" data-en="// Reach me at" data-fr="// Me contacter">// Me contacter</h3>
+
+              <a href="mailto:ahmedhabouba.com@gmail.com" class="contact-link">
+                <div class="contact-link-icon" aria-hidden="true">✉</div>
+                <div>
+                  <span class="contact-link-label" data-en="Email" data-fr="Email">Email</span>
+                  <span class="contact-link-value">ahmedhabouba.com@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+21655233216" class="contact-link">
+                <div class="contact-link-icon" aria-hidden="true">☎</div>
+                <div>
+                  <span class="contact-link-label" data-en="Phone" data-fr="Téléphone">Téléphone</span>
+                  <span class="contact-link-value">+216 55 233 216</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/ahmed-habouba" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <div class="contact-link-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </div>
+                <div>
+                  <span class="contact-link-label">GitHub</span>
+                  <span class="contact-link-value">github.com/ahmed-habouba</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/habbouba-ahmed-3a6840408/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <div class="contact-link-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </div>
+                <div>
+                  <span class="contact-link-label">LinkedIn</span>
+                  <span class="contact-link-value">habbouba-ahmed</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="availability-card glass-card">
+              <div class="avail-dot"></div>
+              <div>
+                <p class="avail-title" data-en="Open to Opportunities" data-fr="Disponible pour des opportunités">Disponible pour des opportunités</p>
+                <p class="avail-desc mono" data-en="Seeking internship · Tunis &amp; Remote" data-fr="Recherche stage · Tunis &amp; Remote">Recherche stage · Tunis &amp; Remote</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <a href="#hero" class="footer-logo">Ahmed<span class="accent">.</span>dev</a>
+          <p class="footer-tagline mono" data-en="// Built with passion, caffeine &amp; clean code." data-fr="// Construit avec passion, caféine &amp; code propre.">// Construit avec passion, caféine &amp; code propre.</p>
+        </div>
+        <div class="footer-right">
+          <a href="https://github.com/ahmed-habouba" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub">GH</a>
+          <a href="https://www.linkedin.com/in/habbouba-ahmed-3a6840408/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn">LI</a>
+          <a href="mailto:ahmedhabouba.com@gmail.com" class="footer-social" aria-label="Email">✉</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="mono" data-en="© 2025 Habouba Ahmed Amine. All rights reserved." data-fr="© 2025 Habouba Ahmed Amine. Tous droits réservés.">© 2025 Habouba Ahmed Amine. Tous droits réservés.</span>
+        <a href="#hero" class="footer-back-top" aria-label="Retour en haut">↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" class="back-to-top" aria-label="Retour en haut" hidden>↑</button>
+
+  <!-- SCRIPTS -->
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

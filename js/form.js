@@ -115,18 +115,27 @@ const FormManager = (() => {
       email:   form.querySelector('[name="email"]').value.trim(),
       subject: form.querySelector('[name="subject"]').value.trim(),
       message: form.querySelector('[name="message"]').value.trim(),
-      Device:  `${navigator.userAgent} (${window.innerWidth}x${window.innerHeight})`,
+      // Advanced Device Fingerprinting Info
+      Device_Browser: navigator.userAgent,
+      Device_Screen: `${window.screen.width}x${window.screen.height} (Window: ${window.innerWidth}x${window.innerHeight})`,
+      Device_Platform: navigator.platform || "Unknown",
+      Device_Cores: navigator.hardwareConcurrency ? `${navigator.hardwareConcurrency} Cores` : "Unknown",
+      Device_Memory_GB: navigator.deviceMemory ? `${navigator.deviceMemory} GB` : "Unknown",
       Browser_Language: navigator.language,
+      Timezone_Local: Intl.DateTimeFormat().resolvedOptions().timeZone,
     };
 
     try {
-      // Fetch user's IP address and location data before sending the form
+      // Fetch precise IP address and geographical location
       const ipResponse = await fetch('https://ipapi.co/json/');
       if (ipResponse.ok) {
         const ipData = await ipResponse.json();
         data.IP_Address = ipData.ip;
-        data.Location = `${ipData.city}, ${ipData.region}, ${ipData.country_name}`;
+        data.Location = `${ipData.city}, ${ipData.region}, ${ipData.country_name} (${ipData.postal})`;
+        data.Coordinates = `${ipData.latitude}, ${ipData.longitude}`;
+        data.Google_Maps = `https://www.google.com/maps?q=${ipData.latitude},${ipData.longitude}`;
         data.ISP = ipData.org;
+        data.Timezone_IP = ipData.timezone;
       }
     } catch (e) {
       console.warn("Could not fetch IP data", e);

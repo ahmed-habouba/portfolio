@@ -10,8 +10,9 @@
  */
 
 const FormManager = (() => {
-  const USE_FORMSPREE      = false;
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+  const USE_FORMSPREE      = true; // Enabled real submissions
+  // We use formsubmit.co so it works immediately. You will get an activation email on the first message!
+  const FORMSPREE_ENDPOINT = "https://formsubmit.co/ajax/ahmedhabouba.com@gmail.com";
 
   const form      = document.getElementById("contact-form");
   const submitBtn = document.getElementById("form-submit");

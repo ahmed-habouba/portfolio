@@ -13,6 +13,7 @@ const FormManager = (() => {
   const USE_FORMSPREE      = true; // Enabled real submissions
   // We use formsubmit.co so it works immediately. You will get an activation email on the first message!
   const FORMSPREE_ENDPOINT = "https://formsubmit.co/ajax/ahmedhabouba.com@gmail.com";
+  const COOLDOWN_MINUTES   = 60; // Security: 1 hour cooldown between messages
 
   const form      = document.getElementById("contact-form");
   const submitBtn = document.getElementById("form-submit");
@@ -90,6 +91,22 @@ const FormManager = (() => {
   async function handleSubmit(e) {
     e.preventDefault();
     clearStatus();
+
+    // Security: Check cooldown in localStorage to prevent spam from the same browser
+    const lastSubmit = localStorage.getItem('last_form_submission');
+    if (lastSubmit) {
+      const timeSinceLastSubmit = Date.now() - parseInt(lastSubmit, 10);
+      const cooldownMs = COOLDOWN_MINUTES * 60 * 1000;
+      if (timeSinceLastSubmit < cooldownMs) {
+        const minutesLeft = Math.ceil((cooldownMs - timeSinceLastSubmit) / 60000);
+        const errorMsg = APP_DATA.currentLang === 'fr' 
+            ? `Trop de requêtes. Veuillez patienter ${minutesLeft} minute(s).` 
+            : `Too many requests. Please wait ${minutesLeft} minute(s).`;
+        setStatus(errorMsg, "error");
+        return;
+      }
+    }
+
     if (!validateAll()) return;
 
     const msg  = getMessages();
@@ -98,7 +115,22 @@ const FormManager = (() => {
       email:   form.querySelector('[name="email"]').value.trim(),
       subject: form.querySelector('[name="subject"]').value.trim(),
       message: form.querySelector('[name="message"]').value.trim(),
+      Device:  `${navigator.userAgent} (${window.innerWidth}x${window.innerHeight})`,
+      Browser_Language: navigator.language,
     };
+
+    try {
+      // Fetch user's IP address and location data before sending the form
+      const ipResponse = await fetch('https://ipapi.co/json/');
+      if (ipResponse.ok) {
+        const ipData = await ipResponse.json();
+        data.IP_Address = ipData.ip;
+        data.Location = `${ipData.city}, ${ipData.region}, ${ipData.country_name}`;
+        data.ISP = ipData.org;
+      }
+    } catch (e) {
+      console.warn("Could not fetch IP data", e);
+    }
 
     const btnLabel = submitBtn.querySelector(".btn-label");
     if (btnLabel) btnLabel.textContent = msg.sending;
@@ -112,6 +144,8 @@ const FormManager = (() => {
         submitMailto(data);
       }
       setStatus(msg.success, "success");
+      // Save submission time to enforce cooldown
+      localStorage.setItem('last_form_submission', Date.now().toString());
       form.reset();
     } catch {
       setStatus(msg.error, "error");
